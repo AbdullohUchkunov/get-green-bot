@@ -312,7 +312,7 @@ def main():
             port=port,
             webhook_url=webhook_url,
             allowed_updates=["message"],
-            drop_pending_updates=True,
+            drop_pending_updates=False,
         )
     else:
         log.info("Running in polling mode.")
