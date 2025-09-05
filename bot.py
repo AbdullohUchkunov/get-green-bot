@@ -305,12 +305,14 @@ def main():
         base = os.getenv("WEBHOOK_BASE_URL", base)
         if not base:
             raise RuntimeError("WEBHOOK_BASE_URL yoki RENDER_EXTERNAL_URL/RAILWAY_PUBLIC_DOMAIN kerak.")
-        webhook_url = f"{base}/webhook/{BOT_TOKEN}"
+        webhook_url  = f"{base}/webhook/{BOT_TOKEN}"
+        webhook_path = f"/webhook/{BOT_TOKEN}"
         log.info("Running in webhook mode. %s", webhook_url)
         app.run_webhook(
             listen="0.0.0.0",
             port=port,
             webhook_url=webhook_url,
+            webhook_path=webhook_path,
             allowed_updates=["message"],
             drop_pending_updates=False,
         )
