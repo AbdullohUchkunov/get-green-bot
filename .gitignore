@@ -1,0 +1,11 @@
+# virtual env
+.venv/
+# mahalliy sozlamalar
+.env
+# python kesh
+__pycache__/
+*.pyc
+# IDE fayllari (ixtiyoriy)
+.vscode/
+.idea/
+.DS_Store
